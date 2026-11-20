@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baraz Fashion - Premium Bengali Fashion Collection, Cash on Delivery</title>
+<meta name="description" content="Baraz Fashion - Premium Bengali Fashion Collection, Cash on Delivery, All Bangladesh Delivery">
+<meta property="og:title" content="Baraz Fashion">
+<meta property="og:description" content="Baraz Fashion - Premium Bengali Fashion Collection, Cash on Delivery, All Bangladesh Delivery">
+<meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4cqz7bNlyZW7SzMP2LcjyeUMG3A51AMqnL5c9QCF-DGjEkS1LJveN9r_vDhxeUvMhanZPtVANsGyZozOjNjrp4VUkwyXnLhRYm9LnLidNUHVza3TqUhLZLoVH1OH9psJXeOF96oap8YKlsbzEm0O62cZtMNDq7OXTIHsC_J_ZhNCgbGYXcBQeTji7Yrvw/s1600/benar.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Hind Siliguri',sans-serif;background:#fff;color:#111;padding-bottom:78px;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%}
+button{font-family:'Hind Siliguri',sans-serif;cursor:pointer}
+/* Utility */
+#bf-utility-bar{background:#fff;border-bottom:1px solid #e5e7eb;padding:6px 12px;display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:700;position:sticky;top:0;z-index:90}
+#bf-utility-left{display:flex;align-items:center;gap:6px;color:#374151;background:#f3f4f6;padding:5px 12px;border-radius:20px;border:1px solid #e5e7eb}
+#bf-utility-right{display:flex;align-items:center;gap:6px;background:#e65100;color:#fff;padding:6px 16px;border-radius:20px;box-shadow:0 2px 8px rgba(128,0,32,.25)}
+#bf-cart-badge{background:#fef08a;color:#111;padding:2px 7px;border-radius:50%;font-size:11px;min-width:18px;text-align:center;font-weight:900}
+/* Header */
+.bf-top-marquee{background:#111;color:#fff;overflow:hidden;padding:7px 0;font-size:13px;font-weight:700;white-space:nowrap}
+.bf-top-marquee-track{display:inline-block;animation:marquee 18s linear infinite}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.bf-header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:#fff}
+.bf-logo{font-weight:900;font-size:24px;color:#b91c1c;line-height:1}
+.bf-logo span{color:#111}
+.bf-logo small{display:block;font-size:11px;color:#6b7280;font-weight:600;letter-spacing:1px}
+.bf-header-btns{display:flex;gap:8px}
+.bf-header-btn{width:40px;height:40px;border-radius:50%;border:1px solid #e5e7eb;background:#f9fafb;display:flex;align-items:center;justify-content:center;font-size:18px;text-decoration:none}
+.bf-top-bar{background:#fff7ed;text-align:center;font-size:12px;font-weight:700;padding:7px 10px;color:#7c2d12;border-bottom:1px solid #fed7aa}
+/* Banner */
+.bf-banner{padding:10px}
+.bf-banner img{width:100%;height:220px;object-fit:cover;border-radius:14px;display:block}
+@media(min-width:768px){.bf-banner img{height:340px}}
+.bf-banner-text{text-align:center;margin-top:8px}
+.bf-banner-text h2{font-size:20px;font-weight:900}
+.bf-banner-text p{font-size:13px;color:#555;margin-top:4px}
+/* Search + cats */
+.bf-search{padding:0 12px}
+.bf-search input{width:100%;padding:12px 16px;border:2px solid #111;border-radius:12px;font-size:14px;outline:none}
+.bf-cats{display:flex;gap:8px;overflow-x:auto;padding:12px;scrollbar-width:none}
+.bf-cats::-webkit-scrollbar{display:none}
+.bf-cat{white-space:nowrap;padding:9px 16px;border-radius:20px;border:2px solid #111;background:#fff;font-weight:800;font-size:13px}
+.bf-cat.active{background:#111;color:#fff}
+/* How to */
+.bf-how{padding:0 12px 12px}
+.bf-how h3{font-size:17px;font-weight:900;margin:6px 0 10px}
+.bf-how-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.bf-how-step{background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:10px}
+.bf-how-step b{display:block;font-size:13px}
+.bf-how-step small{font-size:11px;color:#555;line-height:1.4;display:block;margin-top:3px}
+.bf-how-step .num{width:26px;height:26px;background:#e65100;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;margin-bottom:6px}
+/* Products */
+.bf-sec-title{padding:12px;font-size:21px;font-weight:900;display:flex;justify-content:space-between;align-items:center}
+.bf-sec-title span{font-size:12px;font-weight:700;color:#e65100;background:#fff7ed;padding:5px 10px;border-radius:20px}
+#productsGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:0 10px 10px}
+@media(min-width:768px){#productsGrid{grid-template-columns:repeat(4,1fr)}}
+.bf-card{background:#fff;border:2px solid #f8bbd0;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.bf-card-img{width:100%;height:210px;object-fit:cover;background:#f9fafb}
+@media(max-width:480px){.bf-card-img{height:160px}}
+.bf-card-body{padding:10px;flex:1;display:flex;flex-direction:column}
+.bf-card-cat{font-size:11px;font-weight:700;color:#e91e63}
+.bf-card-title{font-size:14px;font-weight:800;line-height:1.35;margin:4px 0;min-height:38px}
+.bf-card-price{color:#dc2626;font-weight:900;font-size:17px}
+.bf-card-old{color:#9ca3af;text-decoration:line-through;font-size:12px;margin-left:6px}
+.bf-card-btns{display:flex;gap:6px;margin-top:10px}
+.bf-btn{flex:1;padding:10px 6px;border:none;border-radius:9px;font-weight:800;font-size:12px}
+.bf-btn-order{background:#dc2626;color:#fff}
+.bf-btn-cart{background:#111;color:#fff}
+.bf-btn-detail{background:#fff;border:1.5px solid #111;color:#111}
+/* Delivery box */
+.bf-delivery{margin:0 12px 12px;background:#f0fdf4;border:2px solid #bbf7d0;border-radius:12px;padding:12px}
+.bf-delivery b{font-size:13px}
+.bf-delivery p{font-size:12px;color:#166534;margin-top:4px;line-height:1.5}
+/* Reviews */
+.bf-reviews{padding:12px}
+.bf-reviews h3{font-size:18px;font-weight:900;margin-bottom:10px}
+.bf-review-box{background:#fff;border:2px solid #f8bbd0;border-radius:14px;padding:12px;margin-bottom:10px}
+.bf-review-box input,.bf-review-box textarea,.bf-review-box select{width:100%;padding:10px;border:1.5px solid #e5e7eb;border-radius:9px;margin-bottom:8px;font-family:'Hind Siliguri',sans-serif}
+.bf-review-item{border:1px solid #f3d1d9;border-radius:12px;padding:10px;margin-bottom:8px;background:#fff9fa}
+.bf-review-item b{font-size:13px}
+.bf-review-item p{font-size:13px;margin-top:4px;line-height:1.5}
+/* Footer */
+footer{background:#111827;color:#fff;padding:20px 14px 10px;margin-top:10px;text-align:center}
+footer h4{font-size:18px;color:#fda4af}
+footer p{font-size:12px;color:#d1d5db;line-height:1.6;margin:8px 0}
+footer a{color:#fff;text-decoration:none;font-size:12px;margin:0 6px}
+.bf-social{display:flex;gap:10px;justify-content:center;margin:12px 0}
+.bf-social a{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;text-decoration:none}
+/* Floating */
+.bf-float-stack{position:fixed;right:12px;bottom:92px;display:flex;flex-direction:column;gap:12px;z-index:10000}
+.bf-float-btn{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;border:2px solid #fff;box-shadow:0 4px 16px rgba(0,0,0,.28);font-size:22px;position:relative}
+.bf-float-wa{background:#25D366}
+.bf-float-msg{background:#0082FB}
+.bf-float-call{background:#7C3AED}
+/* Bottom nav */
+.bf-bottom{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #e5e7eb;display:flex;justify-content:space-around;padding:6px 2px 10px;z-index:9999}
+.bf-bnav{display:flex;flex-direction:column;align-items:center;font-size:11px;font-weight:700;color:#333;text-decoration:none;gap:1px;flex:1}
+.bf-bnav.active{color:#111}
+.bf-bnav-ic{width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.bf-bnav-ic-purple{width:46px;height:46px;background:#7C3AED;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;margin-top:-22px;border:3px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+/* Modals */
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:99999;align-items:flex-start;justify-content:center;padding:16px;overflow-y:auto}
+.modal.open{display:flex}
+.modal-box{background:#fff;width:100%;max-width:480px;border-radius:16px;padding:16px;margin-top:20px;max-height:92vh;overflow-y:auto;position:relative}
+.modal-box h3{font-size:17px;font-weight:900;margin-bottom:10px}
+.close-btn{position:absolute;top:10px;right:10px;background:#f3f4f6;border:none;width:32px;height:32px;border-radius:50%;font-size:16px}
+label{font-size:12px;font-weight:800;display:block;margin:10px 0 5px}
+input,select,textarea{width:100%;padding:11px;border:1.5px solid #e5e7eb;border-radius:9px;font-size:14px;font-family:'Hind Siliguri',sans-serif;outline:none}
+input:focus,select:focus,textarea:focus{border-color:#e91e63}
+.bf-size-cat-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.bf-size-cat-btn{flex:1;min-width:90px;padding:9px 6px;text-align:center;border:2px solid #111827;border-radius:8px;font-weight:800;font-size:12px;background:#fff;color:#111827}
+.bf-size-cat-btn.active{background:#111827;color:#fff}
+.bf-size-pills{display:flex;gap:6px;flex-wrap:wrap}
+.bf-size-pill{padding:8px 12px;border:2px solid #111;border-radius:20px;font-size:12px;font-weight:800;background:#fff}
+.bf-size-pill.active{background:#111;color:#fff}
+.bf-total-box{background:#fff7ed;border:2px dashed #be123c;border-radius:10px;padding:10px;text-align:center;font-weight:900;margin-top:12px;font-size:14px}
+.bf-detail-img{width:100%;max-height:380px;object-fit:cover;border-radius:12px}
+.bf-detail-price{color:#dc2626;font-weight:900;font-size:22px}
+.cart-item{display:flex;gap:10px;border:1px solid #e5e7eb;border-radius:10px;padding:8px;margin-bottom:10px;align-items:center}
+.cart-item img{width:60px;height:70px;object-fit:cover;border-radius:8px}
+.cart-item-info{flex:1}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#111;color:#fff;padding:10px 16px;border-radius:20px;font-size:13px;font-weight:700;z-index:100000;display:none}
+.admin-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.admin-stat{background:#fff;border:2px solid #f8bbd0;border-radius:12px;padding:14px;text-align:center}
+.admin-stat b{font-size:22px;color:#c73e6d}
+.order-card{border:2px solid #f8bbd0;border-radius:14px;padding:12px;margin-bottom:10px;background:#fff}
+</style>
+</head>
+<body>
+
+<!-- Utility -->
+<div id="bf-utility-bar">
+  <div id="bf-utility-left"><span>👁️</span><span>ভিজিটর:</span><span id="bf-visitor-count" style="color:#e65100;font-weight:900">৩,২৪৭</span><span>জন</span></div>
+  <div id="bf-utility-right" onclick="openCart()"><span>🛒</span><span>কার্ট</span><span id="bf-cart-badge">0</span></div>
+</div>
+
+<div class="bf-top-bar">নিরাপদ পেমেন্ট ও ফাস্ট ডেলিভারির বিশ্বস্ত মাধ্যম - Baraz Fashion</div>
+
+<header class="bf-header">
+  <div class="bf-logo">BARAZ <span>FASHION</span><small>PREMIUM BENGALI FASHION</small></div>
+  <div class="bf-header-btns">
+    <a class="bf-header-btn" href="https://www.facebook.com/barazfashion" target="_blank">f</a>
+    <a class="bf-header-btn" href="tel:01917317099">📞</a>
+    <a class="bf-header-btn" href="https://wa.me/8801917317099" target="_blank">💬</a>
+  </div>
+</header>
+
+<div class="bf-top-marquee"><div class="bf-top-marquee-track">📦 বাংলাদেশে ক্যাশ অন ডেলিভারি! 🚚 ৫০০০ টাকার উপরে ফ্রি ডেলিভারি! 🎉 সারা দেশে হোম ডেলিভারি! 📦 বাংলাদেশে ক্যাশ অন ডেলিভারি! 🚚 ৫০০০ টাকার উপরে ফ্রি ডেলিভারি! 🎉&nbsp;&nbsp;</div></div>
+
+<!-- Banner - তোমার আগের ছবিটাই -->
+<div class="bf-banner">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4cqz7bNlyZW7SzMP2LcjyeUMG3A51AMqnL5c9QCF-DGjEkS1LJveN9r_vDhxeUvMhanZPtVANsGyZozOjNjrp4VUkwyXnLhRYm9LnLidNUHVza3TqUhLZLoVH1OH9psJXeOF96oap8YKlsbzEm0O62cZtMNDq7OXTIHsC_J_ZhNCgbGYXcBQeTji7Yrvw/s1600/benar.jpg" alt="Baraz Fashion Banner">
+  <div class="bf-banner-text"><h2>Baraz Fashion - Premium Collection</h2><p>ক্যাশ অন ডেলিভারি • সারা বাংলাদেশে হোম ডেলিভারি • ৩ দিনের মধ্যে রিটার্ন</p></div>
+</div>
+
+<div class="bf-search"><input id="searchInput" placeholder="🔍 পোশাক খুঁজুন... যেমন: থ্রি পিস, বোরখা, শাড়ি" oninput="renderProducts()"></div>
+
+<div class="bf-cats" id="catBar">
+  <button class="bf-cat active" onclick="setCat('all',this)">সবগুলো</button>
+  <button class="bf-cat" onclick="setCat('women',this)">মেয়েদের পোশাক</button>
+  <button class="bf-cat" onclick="setCat('kids',this)">বাচ্চাদের</button>
+  <button class="bf-cat" onclick="setCat('men',this)">ছেলেদের পোশাক</button>
+</div>
+
+<!-- How to order -->
+<div class="bf-how">
+  <h3>🛒 কিভাবে অর্ডার করবেন? - ৫টি সহজ ধাপ</h3>
+  <div class="bf-how-grid">
+    <div class="bf-how-step"><div class="num">১</div><b>পছন্দের পোশাক দেখুন</b><small>ছবিতে ক্লিক করে ডিটেলস দেখুন</small></div>
+    <div class="bf-how-step"><div class="num">২</div><b>সাইজ নির্বাচন করুন</b><small>মেয়েদের / বাচ্চাদের / ছেলেদের ক্যাটাগরি অনুযায়ী</small></div>
+    <div class="bf-how-step"><div class="num">৩</div><b>অর্ডার ফর্ম পূরণ করুন</b><small>নাম, ফোন, সম্পূর্ণ ঠিকানা দিন</small></div>
+    <div class="bf-how-step"><div class="num">৪</div><b>অর্ডার কনফার্ম করুন</b><small>আমরা কল করে কনফার্ম করবো</small></div>
+    <div class="bf-how-step" style="grid-column:span 2"><div class="num">৫</div><b>হাতে পেয়ে টাকা দিন</b><small>২-৪ দিনে হোম ডেলিভারি - ঢাকায় ৮০৳ বাইরে ১৪০৳</small></div>
+  </div>
+</div>
+
+<div class="bf-delivery">
+  <b>📦 ডেলিভারি চার্জ</b>
+  <p>ঢাকায়: <b>৳ ৮০</b> | ঢাকার বাইরে: <b>৳ ১৪০</b> | <b>৫০০০৳ এর উপরে ফ্রি ডেলিভারি</b><br>✅ প্রোডাক্ট চেক করে পেমেন্ট<br>✅ ৩ দিনের মধ্যে রিটার্ন সুবিধা<br>✅ সাইজ সমস্যা হলে এক্সচেঞ্জ</p>
+</div>
+
+<div class="bf-sec-title">আমাদের পণ্য <span id="productCount">৮টি পণ্য</span></div>
+<div id="productsGrid"></div>
+
+<!-- Reviews -->
+<div class="bf-reviews">
+  <h3>⭐ আমাদের খুশি কাস্টমারদের রিভিউ</h3>
+  <div class="bf-review-box">
+    <input id="bf-review-name" placeholder="আপনার নাম">
+    <textarea id="bf-review-text" rows="2" placeholder="আপনার অভিজ্ঞতা লিখুন..."></textarea>
+    <select id="bf-review-stars"><option value="5">⭐⭐⭐⭐⭐ - ৫ স্টার</option><option value="4">⭐⭐⭐⭐ - ৪ স্টার</option><option value="3">⭐⭐⭐ - ৩ স্টার</option></select>
+    <button class="bf-btn bf-btn-order" style="width:100%" onclick="submitReview()">রিভিউ পাঠান ❤️</button>
+  </div>
+  <div id="reviewsList"></div>
+  <div class="bf-review-box" style="margin-top:12px">
+    <h3 style="margin-bottom:6px">🎥 কাস্টমারদের ভিডিও রিভিউ</h3>
+    <p style="font-size:12px;color:#555">তোমার ভিডিও রিভিউর লিংক (YouTube / Facebook) এখানে দিলে সবাই দেখতে পারবে।</p>
+    <input id="bf-video-link" placeholder="ভিডিও লিংক পেস্ট করুন">
+    <button class="bf-btn" style="background:#111;color:#fff;width:100%" onclick="addVideoReview()">ভিডিও যোগ করুন</button>
+    <div id="videoList" style="margin-top:10px"></div>
+  </div>
+</div>
+
+<footer>
+  <h4>BARAZ FASHION</h4>
+  <p>Premium Bengali Fashion Collection<br>ক্যাশ অন ডেলিভারি • সারা বাংলাদেশ<br>ফোন: 01917-317099 • Email: barazfashion@gmail.com</p>
+  <div><a href="#" onclick="alert('শর্তাবলী: ক্যাশ অন ডেলিভারি, ৩ দিনের মধ্যে রিটার্ন, সাইজ সমস্যা হলে এক্সচেঞ্জ।');return false">শর্তাবলী</a> | <a href="#" onclick="alert('রিটার্ন পলিসি: প্রোডাক্টে সমস্যা থাকলে ৩ দিনের মধ্যে জানান।');return false">রিটার্ন পলিসি</a> | <a href="#" onclick="alert('প্রাইভেসি: আপনার তথ্য শুধু ডেলিভারির জন্য ব্যবহার হবে।');return false">প্রাইভেসি পলিসি</a></div>
+  <div class="bf-social">
+    <a href="https://www.facebook.com/barazfashion" target="_blank" style="background:#1877F2">f</a>
+    <a href="https://www.instagram.com/barazfashion" target="_blank" style="background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)">IG</a>
+    <a href="https://www.youtube.com/@barazfashion" target="_blank" style="background:#FF0000">▶</a>
+    <a href="mailto:barazfashion@gmail.com" style="background:#EA4335">✉</a>
+  </div>
+  <div style="font-size:11px;color:#9ca3af">© 2025 Baraz Fashion - নিরাপদ পেমেন্ট ও ফাস্ট ডেলিভারি</div>
+  <div style="margin-top:10px"><button onclick="openAdminLogin()" style="background:#111827;color:#1f2937;border:1px solid #1f2937;padding:6px 16px;border-radius:6px;font-size:10px;opacity:.2;letter-spacing:2px">• • •</button></div>
+</footer>
+
+<!-- Floating -->
+<div class="bf-float-stack">
+  <a class="bf-float-btn bf-float-wa" href="https://wa.me/8801917317099?text=হ্যালো,%20আমি%20সহযোগিতা%20চাচ্ছি।" target="_blank">💬</a>
+  <a class="bf-float-btn bf-float-msg" href="https://m.me/barazfashion" target="_blank">💙</a>
+  <a class="bf-float-btn bf-float-call" href="tel:01917317099">📞</a>
+</div>
+
+<!-- Bottom Nav -->
+<div class="bf-bottom">
+  <a class="bf-bnav active" href="#"><div class="bf-bnav-ic">🏠</div>হোম</a>
+  <a class="bf-bnav" href="#productsGrid"><div class="bf-bnav-ic">🛍️</div>পোশাক</a>
+  <a class="bf-bnav" href="javascript:void(0)" onclick="openAdminLogin()"><div class="bf-bnav-ic-purple">👤</div>অ্যাকাউন্ট</a>
+  <a class="bf-bnav" href="javascript:void(0)" onclick="openCart()"><div class="bf-bnav-ic">🛒</div>কার্ট</a>
+  <a class="bf-bnav" href="tel:01917317099"><div class="bf-bnav-ic">📞</div>কল</a>
+</div>
+
+<!-- Cart Modal -->
+<div class="modal" id="cartModal"><div class="modal-box"><button class="close-btn" onclick="closeModal('cartModal')">✕</button><h3>🛒 আপনার কার্ট</h3><div id="cartList"></div><div id="cartEmpty" style="text-align:center;padding:20px;color:#666">কার্ট খালি<br><button class="bf-btn bf-btn-order" style="margin-top:10px" onclick="closeModal('cartModal')">পোশাক দেখুন</button></div><div id="cartFooter" style="display:none;margin-top:10px"><div style="display:flex;justify-content:space-between;font-weight:900"><span>মোট আইটেম:</span><span id="cartTotalCount">0</span></div><button class="bf-btn bf-btn-order" style="width:100%;margin-top:10px" onclick="checkoutFromCart()">✅ অর্ডার কনফার্ম করুন</button></div></div></div>
+
+<!-- Detail Modal -->
+<div class="modal" id="detailModal"><div class="modal-box"><button class="close-btn" onclick="closeModal('detailModal')">✕</button><img id="detailImg" class="bf-detail-img" src=""><div style="padding:8px 0"><h3 id="detailTitle"></h3><div><span class="bf-detail-price" id="detailPrice"></span> <span class="bf-card-old" id="detailOld"></span></div><p id="detailDesc" style="font-size:13px;color:#555;margin:8px 0;line-height:1.6"></p><label>সাইজ ক্যাটাগরি</label><div class="bf-size-cat-row"><button class="bf-size-cat-btn active" data-cat="women" onclick="setSizeCat('women','detail',this)">মেয়েদের পোশাক</button><button class="bf-size-cat-btn" data-cat="kids" onclick="setSizeCat('kids','detail',this)">বাচ্চাদের পোশাক</button><button class="bf-size-cat-btn" data-cat="men" onclick="setSizeCat('men','detail',this)">ছেলেদের পোশাক</button></div><label>সাইজ নির্বাচন করুন *</label><div class="bf-size-pills" id="detailSizes"></div><input id="detailCustomSize" placeholder="কাস্টম সাইজ লিখুন (যদি থাকে)" style="margin-top:8px"><div style="margin-top:12px;display:flex;gap:8px"><button class="bf-btn bf-btn-order" onclick="orderFromDetail()">🛒 এখনই অর্ডার করুন</button><button class="bf-btn bf-btn-cart" onclick="addToCartFromDetail()">কার্টে যোগ করুন</button></div><div style="display:flex;gap:8px;margin-top:8px"><a class="bf-btn" style="background:#0ea5e9;color:#fff;text-align:center;text-decoration:none" href="tel:01917317099">📞 কল করুন</a><a class="bf-btn" style="background:#16a34a;color:#fff;text-align:center;text-decoration:none" href="https://wa.me/8801917317099" target="_blank">💬 WhatsApp</a></div></div></div></div>
+
+<!-- Order Modal -->
+<div class="modal" id="orderModal"><div class="modal-box"><button class="close-btn" onclick="closeModal('orderModal')">✕</button><h3>📝 অর্ডার করতে তথ্য দিন</h3><div style="display:flex;gap:10px;align-items:center;background:#fff9fa;border:1px solid #f8bbd0;border-radius:10px;padding:8px"><img id="orderImg" src="" style="width:60px;height:70px;object-fit:cover;border-radius:8px"><div><b id="orderTitle" style="font-size:13px"></b><div id="orderPrice" style="color:#dc2626;font-weight:900"></div></div></div>
+<label>পোশাকের নাম</label><input id="orderProductName" readonly>
+<label>আপনার নাম *</label><input id="orderName" placeholder="পুরো নাম লিখুন">
+<label>ফোন নম্বর *</label><input id="orderPhone" placeholder="01XXXXXXXXX" type="tel">
+<label>সাইজ ক্যাটাগরি</label><div class="bf-size-cat-row"><button class="bf-size-cat-btn active" data-cat="women" onclick="setSizeCat('women','order',this)">মেয়েদের পোশাক</button><button class="bf-size-cat-btn" data-cat="kids" onclick="setSizeCat('kids','order',this)">বাচ্চাদের পোশাক</button><button class="bf-size-cat-btn" data-cat="men" onclick="setSizeCat('men','order',this)">ছেলেদের পোশাক</button></div>
+<label>সাইজ নির্বাচন করুন *</label><div class="bf-size-pills" id="orderSizes"></div><input id="orderCustomSize" placeholder="কাস্টম সাইজ / বডি, স্কার্ট, পায়জামা সাইজ লিখুন" style="margin-top:8px">
+<label>পরিমাণ</label><select id="orderQty" onchange="updateTotal()"><option value="1">১ টি</option><option value="2">২ টি</option><option value="3">৩ টি</option><option value="4">৪ টি</option><option value="5">৫ টি</option></select>
+<label>ডেলিভারি এলাকা *</label><select id="orderArea" onchange="updateTotal()"><option value="dhaka">ঢাকার ভিতরে - ৮০৳</option><option value="outside">ঢাকার বাইরে - ১৪০৳</option></select>
+<label>সম্পূর্ণ ঠিকানা লিখুন *</label><textarea id="orderAddress" rows="2" placeholder="বাসা, রোড, এলাকা, জেলা - অর্ডার কনফার্ম করার আগে বডি সাইজ ও স্কার্ট সাইজ এবং পায়জামা সাইজ অবশ্যই লিখে দিবেন"></textarea>
+<label>পেমেন্ট</label><select id="orderPayment"><option>Cash on Delivery (হাতে পেয়ে টাকা দিন)</option><option>bKash</option><option>Nagad</option></select>
+<div class="bf-total-box" id="totalBox">মোট: ৳ ০</div>
+<button class="bf-btn bf-btn-order" style="width:100%;padding:14px;margin-top:12px;font-size:15px" onclick="submitOrder()">✅ অর্ডার কনফার্ম করুন</button>
+<p style="font-size:11px;color:#666;text-align:center;margin-top:8px">অর্ডার করলে আমরা কল করে কনফার্ম করবো। প্রোডাক্ট চেক করে টাকা দিবেন।</p>
+</div></div>
+
+<!-- Thank you -->
+<div class="modal" id="thanksModal"><div class="modal-box" style="text-align:center"><h3>ধন্যবাদ! আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে।</h3><p style="font-size:13px;line-height:1.6">আমরা শীঘ্রই কল করে কনফার্ম করবো।<br>অর্ডার ID: <b id="thanksId"></b></p><button class="bf-btn bf-btn-order" style="width:100%;margin-top:12px" onclick="closeModal('thanksModal')">ঠিক আছে</button></div></div>
+
+<!-- Admin Login -->
+<div class="modal" id="adminLoginModal"><div class="modal-box"><button class="close-btn" onclick="closeModal('adminLoginModal')">✕</button><h3>🔒 এডমিন প্যানেল লগইন</h3><p style="font-size:12px;color:#666">অর্ডার দেখতে সিক্রেট পাসওয়ার্ড দিন।</p><label>পাসওয়ার্ড লিখুন</label><input id="adminPass" type="password" placeholder="•••••"><button class="bf-btn bf-btn-order" style="width:100%;margin-top:12px" onclick="verifyAdmin()">লগইন করুন</button></div></div>
+
+<!-- Admin Dashboard -->
+<div class="modal" id="adminModal"><div class="modal-box"><button class="close-btn" onclick="closeModal('adminModal')">✕</button><h3>Baraz <span style="color:#e91e63">Fashion</span> - Admin Panel</h3><div class="admin-stats"><div class="admin-stat"><b id="statTotal">0</b><div style="font-size:12px;color:#666">মোট অর্ডার</div></div><div class="admin-stat"><b id="statToday">0</b><div style="font-size:12px;color:#666">আজকের অর্ডার</div></div></div><input id="adminSearch" placeholder="🔍 অর্ডার খুঁজুন - নাম / ফোন / পণ্য" oninput="renderAdmin()"><div id="adminOrders" style="margin-top:10px"></div><button class="bf-btn" style="background:#fee2e2;color:#b91c1c;width:100%;margin-top:10px" onclick="clearAllOrders()">🗑️ সব অর্ডার মুছে ফেলুন</button></div></div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const GOOGLE_SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxxzLZ1zZAbHaTnPvOtlNusAkbpLKthdjj7oz4zE8mCsuquz3j62w9f3Lvl9haJ7_G0hA/exec";
+const ADMIN_PASSWORD = "08650";
+const BANNER_IMG = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4cqz7bNlyZW7SzMP2LcjyeUMG3A51AMqnL5c9QCF-DGjEkS1LJveN9r_vDhxeUvMhanZPtVANsGyZozOjNjrp4VUkwyXnLhRYm9LnLidNUHVza3TqUhLZLoVH1OH9psJXeOF96oap8YKlsbzEm0O62cZtMNDq7OXTIHsC_J_ZhNCgbGYXcBQeTji7Yrvw/s1600/benar.jpg";
+
+// ===== প্রোডাক্ট লিস্ট - এখানে তুমি নিজের পণ্য বদলাতে পারবা =====
+// নতুন পণ্য যোগ করতে নিচের মতো একটা লাইন কপি করে বসাও:
+// {title:"নাম", price:1200, old:1800, cat:"women", img:"ছবির লিংক", desc:"বিবরণ"},
+const PRODUCTS = [
+  {title:"Premium Cotton Three Piece - গোলাপি", price:1200, old:1800, cat:"women", img:"https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop", desc:"Premium Cotton Three Piece. Size: 16 থেকে 44 পর্যন্ত। ক্যাশ অন ডেলিভারি।"},
+  {title:"Georgette Borkha - কালো", price:1450, old:2100, cat:"women", img:"https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=600&auto=format&fit=crop", desc:"Soft Georgette Borkha. আরামদায়ক, ফুল কভারেজ। Body 44,42,40,38,36,34।"},
+  {title:"Silk Sharee - লাল বেনারসি", price:2200, old:3200, cat:"women", img:BANNER_IMG, desc:"Premium Silk Sharee - বেনারসি স্টাইল। বিয়ে / অনুষ্ঠানের জন্য বেস্ট।"},
+  {title:"Printed Three Piece - নীল", price:950, old:1400, cat:"women", img:"https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=600&auto=format&fit=crop", desc:"Comfortable Printed Three Piece. প্রতিদিন পরার জন্য।"},
+  {title:"Bacchader Frock - গোলাপি", price:750, old:1100, cat:"kids", img:"https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?q=80&w=600&auto=format&fit=crop", desc:"Bacchader Soft Frock. Body 32-16 পর্যন্ত।"},
+  {title:"Bacchader Three Piece Set", price:850, old:1250, cat:"kids", img:"https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=600&auto=format&fit=crop", desc:"Bacchader Premium Set. আরামদায়ক কাপড়।"},
+  {title:"Cheleder Panjabi - সাদা", price:1100, old:1600, cat:"men", img:"https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?q=80&w=600&auto=format&fit=crop", desc:"Premium Panjabi. Size: S, M, L, XL, XXL।"},
+  {title:"Cheleder Shirt + Pant Set", price:1350, old:1900, cat:"men", img:"https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=600&auto=format&fit=crop", desc:"Stylish Shirt Set. Size: S, M, L, XL, XXL।"}
+];
+const SIZES = { women:["বডি ৪৪","বডি ৪২","বডি ৪০","বডি ৩৮","বডি ৩৬","বডি ৩৪"], kids:["বডি ৩২","বডি ৩০","বডি ২৮","বডি ২৬","বডি ২৪","বডি ২২","বডি ২০","বডি ১৮","বডি ১৬"], men:["S","M","L","XL","XXL"] };
+let currentCat="all", currentProduct=null, detailSize="", orderSize="", detailCat="women", orderCat="women";
+
+function showToast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.style.display='block'; setTimeout(()=>t.style.display='none',2500); }
+function openModal(id){ document.getElementById(id).classList.add('open'); document.body.style.overflow='hidden'; }
+function closeModal(id){ document.getElementById(id).classList.remove('open'); document.body.style.overflow=''; }
+function setCat(cat,btn){ currentCat=cat; document.querySelectorAll('.bf-cat').forEach(b=>b.classList.remove('active')); if(btn) btn.classList.add('active'); renderProducts(); }
+function renderProducts(){
+  const q=(document.getElementById('searchInput').value||'').toLowerCase();
+  const list=PRODUCTS.filter(p=>(currentCat==='all'||p.cat===currentCat) && p.title.toLowerCase().includes(q));
+  document.getElementById('productCount').textContent=list.length+'টি পণ্য';
+  const grid=document.getElementById('productsGrid');
+  if(!list.length){ grid.innerHTML='<p style="grid-column:span 2;text-align:center;padding:20px">কোনো পণ্য পাওয়া যায়নি।</p>'; return; }
+  grid.innerHTML=list.map((p,i)=>{
+    const idx=PRODUCTS.indexOf(p);
+    const catName=p.cat==='women'?'মেয়েদের পোশাক':p.cat==='kids'?'বাচ্চাদের':'ছেলেদের পোশাক';
+    return `<div class="bf-card"><img class="bf-card-img" src="${p.img}" onclick="openDetail(${idx})" alt=""><div class="bf-card-body"><div class="bf-card-cat">${catName}</div><div class="bf-card-title" onclick="openDetail(${idx})">${p.title}</div><div><span class="bf-card-price">৳ ${p.price.toLocaleString('en-US')}</span><span class="bf-card-old">৳ ${p.old.toLocaleString('en-US')}</span></div><div style="display:flex;gap:6px;margin-top:8px"><button class="bf-btn bf-btn-detail" onclick="openDetail(${idx})">দেখুন</button></div><div class="bf-card-btns"><button class="bf-btn bf-btn-order" onclick="openOrder(${idx})">অর্ডার করুন</button><button class="bf-btn bf-btn-cart" onclick="quickAdd(${idx})">🛒 কার্ট</button></div></div></div>`;
+  }).join('');
+}
+function setSizeCat(cat,scope,btn){
+  if(scope==='detail'){ detailCat=cat; document.querySelectorAll('#detailModal .bf-size-cat-btn').forEach(b=>b.classList.remove('active')); }
+  else{ orderCat=cat; document.querySelectorAll('#orderModal .bf-size-cat-btn').forEach(b=>b.classList.remove('active')); }
+  if(btn) btn.classList.add('active');
+  renderSizePills(cat,scope);
+}
+function renderSizePills(cat,scope){
+  const el=document.getElementById(scope==='detail'?'detailSizes':'orderSizes');
+  el.innerHTML=SIZES[cat].map((s,i)=>`<button class="bf-size-pill ${i===0?'active':''}" onclick="pickSize(this,'${scope}')">${s}</button>`).join('');
+  if(scope==='detail') detailSize=SIZES[cat][0]; else orderSize=SIZES[cat][0];
+}
+function pickSize(btn,scope){ btn.parentElement.querySelectorAll('.bf-size-pill').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); if(scope==='detail') detailSize=btn.textContent; else orderSize=btn.textContent; }
+function openDetail(idx){
+  currentProduct=PRODUCTS[idx];
+  document.getElementById('detailImg').src=currentProduct.img;
+  document.getElementById('detailTitle').textContent=currentProduct.title;
+  document.getElementById('detailPrice').textContent='৳ '+currentProduct.price.toLocaleString('en-US');
+  document.getElementById('detailOld').textContent='৳ '+currentProduct.old.toLocaleString('en-US');
+  document.getElementById('detailDesc').textContent=currentProduct.desc+'\nSize: মেয়েদের - বডি ৪৪, ৪২, ৪০, ৩৮, ৩৬, ৩৪ | বাচ্চাদের - বডি ৩২, ৩০, ২৮, ২৬, ২৪, ২২, ২০, ১৮, ১৬ | ছেলেদের - S, M, L, XL, XXL';
+  detailCat=currentProduct.cat; setSizeCat(currentProduct.cat,'detail',null);
+  // highlight correct cat button
+  document.querySelectorAll('#detailModal .bf-size-cat-btn').forEach(b=>b.classList.toggle('active', b.dataset.cat===currentProduct.cat));
+  document.getElementById('detailCustomSize').value='';
+  openModal('detailModal');
+}
+function orderFromDetail(){ closeModal('detailModal'); openOrder(PRODUCTS.indexOf(currentProduct)); }
+function addToCartFromDetail(){
+  const custom=document.getElementById('detailCustomSize').value.trim();
+  addToCart(currentProduct.img, currentProduct.title, '৳ '+currentProduct.price, currentProduct.desc, detailSize+(custom?' ('+custom+')':''));
+  showToast('কার্টে যোগ হয়েছে ❤️');
+}
+function openOrder(idx){
+  currentProduct=PRODUCTS[idx];
+  document.getElementById('orderImg').src=currentProduct.img;
+  document.getElementById('orderTitle').textContent=currentProduct.title;
+  document.getElementById('orderPrice').textContent='৳ '+currentProduct.price.toLocaleString('en-US');
+  document.getElementById('orderProductName').value=currentProduct.title;
+  orderCat=currentProduct.cat; setSizeCat(currentProduct.cat,'order',null);
+  document.querySelectorAll('#orderModal .bf-size-cat-btn').forEach(b=>b.classList.toggle('active', b.dataset.cat===currentProduct.cat));
+  updateTotal(); openModal('orderModal');
+}
+function updateTotal(){
+  if(!currentProduct) return;
+  const qty=parseInt(document.getElementById('orderQty').value||'1');
+  const area=document.getElementById('orderArea').value;
+  const sub=currentProduct.price*qty;
+  let del=area==='dhaka'?80:140;
+  if(sub>=5000) del=0;
+  const total=sub+del;
+  document.getElementById('totalBox').innerHTML=`পণ্য: ৳ ${sub.toLocaleString('en-US')} &nbsp;|&nbsp; ডেলিভারি: ৳ ${del} ${del===0?'(ফ্রি!)':''} &nbsp;|&nbsp; মোট: ৳ ${total.toLocaleString('en-US')}`;
+  return {sub,del,total};
+}
+// Cart
+function getCart(){ try{return JSON.parse(localStorage.getItem('bf_cart')||'[]')}catch(e){return[]} }
+function setCart(a){ localStorage.setItem('bf_cart',JSON.stringify(a)); updateBadge(); renderCart(); }
+function updateBadge(){ document.getElementById('bf-cart-badge').textContent=getCart().length; }
+function addToCart(img,title,price,desc,size){ const cart=getCart(); cart.unshift({img,title,price,desc:desc||'',size:size||'',time:Date.now()}); if(cart.length>20) cart=cart.slice(0,20); setCart(cart); }
+function quickAdd(idx){ const p=PRODUCTS[idx]; addToCart(p.img,p.title,'৳ '+p.price,p.desc,''); showToast('কার্টে যোগ হয়েছে ❤️'); }
+function removeFromCart(i){ const c=getCart(); c.splice(i,1); setCart(c); }
+function renderCart(){
+  const cart=getCart(); const list=document.getElementById('cartList');
+  document.getElementById('cartEmpty').style.display=cart.length?'none':'block';
+  document.getElementById('cartFooter').style.display=cart.length?'block':'none';
+  document.getElementById('cartTotalCount').textContent=cart.length;
+  list.innerHTML=cart.map((it,i)=>`<div class="cart-item"><img src="${it.img}"><div class="cart-item-info"><div style="font-size:12px;font-weight:800">${it.title}</div><div style="font-size:12px;color:#e65100;font-weight:900">${it.price} ${it.size?' • '+it.size:''}</div></div><button onclick="removeFromCart(${i})" style="background:#fee2e2;color:#b91c1c;border:none;padding:5px 8px;border-radius:6px">✕</button></div>`).join('');
+}
+function openCart(){ renderCart(); openModal('cartModal'); }
+function checkoutFromCart(){ const c=getCart(); if(!c.length) return; closeModal('cartModal'); const idx=PRODUCTS.findIndex(p=>p.title===c[0].title); openOrder(idx>=0?idx:0); }
+function submitOrder(){
+  const name=document.getElementById('orderName').value.trim();
+  const phone=document.getElementById('orderPhone').value.trim();
+  const addr=document.getElementById('orderAddress').value.trim();
+  const custom=document.getElementById('orderCustomSize').value.trim();
+  const qty=document.getElementById('orderQty').value;
+  const area=document.getElementById('orderArea').value;
+  const payment=document.getElementById('orderPayment').value;
+  if(!name) return alert('আপনার নাম লিখুন');
+  if(!phone || phone.length<11) return alert('সঠিক ফোন নম্বর দিন');
+  if(!addr) return alert('সম্পূর্ণ ঠিকানা লিখুন');
+  const size=orderSize+(custom?' ('+custom+')':'');
+  const tot=updateTotal();
+  const id='BZ-'+new Date().toISOString().slice(0,10).replace(/-/g,'')+'-'+Math.floor(1000+Math.random()*9000);
+  const order={id, title:currentProduct.title, price:currentProduct.price, size, qty, name, phone, address:addr, area, payment, total:tot.total, delivery:tot.del, time:new Date().toLocaleString('bn-BD')};
+  try{ const all=JSON.parse(localStorage.getItem('bf_store_orders')||'[]'); all.unshift(order); localStorage.setItem('bf_store_orders',JSON.stringify(all)); }catch(e){}
+  // Google Sheet - JSONP + fetch (তোমার আগের সিস্টেমই)
+  try{
+    const cb='bfOrder_'+Date.now(); window[cb]=function(){};
+    const s=document.createElement('script'); s.src=GOOGLE_SHEET_WEB_APP_URL+'?action=addOrder&callback='+cb+'&data='+encodeURIComponent(JSON.stringify(order)); document.head.appendChild(s); setTimeout(()=>{try{document.head.removeChild(s)}catch(e){}},8000);
+    fetch(GOOGLE_SHEET_WEB_APP_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify({action:'addOrder',...order})}).catch(()=>{});
+  }catch(e){}
+  closeModal('orderModal');
+  document.getElementById('thanksId').textContent=id;
+  openModal('thanksModal');
+  document.getElementById('orderName').value=''; document.getElementById('orderPhone').value=''; document.getElementById('orderAddress').value=''; document.getElementById('orderCustomSize').value='';
+  // WhatsApp এও পাঠাতে চাইলে - ব্রাউজারে খুলবে
+  const waMsg=`হ্যালো Baraz Fashion! নতুন অর্ডার%0AID: ${id}%0Aপণ্য: ${encodeURIComponent(currentProduct.title)}%0Aদাম: ${currentProduct.price}%0Aসাইজ: ${encodeURIComponent(size)}%0AQty: ${qty}%0Aনাম: ${encodeURIComponent(name)}%0Aফোন: ${phone}%0Aঠিকানা: ${encodeURIComponent(addr)}%0Aমোট: ${tot.total}৳`;
+  // শুধু কনসোলে রাখছি, চাইলে নিচের লাইন আনকমেন্ট করলে WhatsApp খুলবে
+  // window.open('https://wa.me/8801917317099?text='+waMsg,'_blank');
+}
+// Reviews
+function getReviews(){ try{return JSON.parse(localStorage.getItem('bf_reviews')||'[]')}catch(e){return[]} }
+function renderReviews(){
+  const list=getReviews();
+  const el=document.getElementById('reviewsList');
+  if(!list.length){ el.innerHTML='<div class="bf-review-item"><b>রহিমা আক্তার</b> ⭐⭐⭐⭐⭐<p>"অর্ডার করার পরের দিনই পেয়ে গেছি। সাইজ একদম পারফেক্ট। আবার নেব ইনশাআল্লাহ।"</p></div><div class="bf-review-item"><b>নুসরাত জাহান</b> ⭐⭐⭐⭐⭐<p>"কাপড়ের কোয়ালিটি অনেক ভালো। ছবির মতোই পেয়েছি।"</p></div>'; return; }
+  el.innerHTML=list.map(r=>`<div class="bf-review-item"><b>${r.name}</b> ${'⭐'.repeat(r.stars)}<p>${r.text}</p></div>`).join('');
+}
+function submitReview(){
+  const name=document.getElementById('bf-review-name').value.trim();
+  const text=document.getElementById('bf-review-text').value.trim();
+  const stars=parseInt(document.getElementById('bf-review-stars').value);
+  if(!name) return alert('আপনার নাম লিখুন');
+  if(!text) return alert('কমেন্ট লিখুন');
+  const list=getReviews(); list.unshift({name,text,stars,time:new Date().toLocaleString()}); localStorage.setItem('bf_reviews',JSON.stringify(list));
+  document.getElementById('bf-review-name').value=''; document.getElementById('bf-review-text').value='';
+  renderReviews(); showToast('ধন্যবাদ! আপনার রিভিউ যোগ হয়েছে ❤️');
+}
+function addVideoReview(){
+  const link=document.getElementById('bf-video-link').value.trim();
+  if(!link) return alert('ভিডিও লিংক দিন');
+  const el=document.getElementById('videoList');
+  el.innerHTML+=`<div style="border:1px solid #e5e7eb;border-radius:10px;padding:10px;margin-top:8px"><a href="${link}" target="_blank" style="font-size:13px;font-weight:700;color:#2563eb">🎥 ভিডিও দেখুন - ${link}</a></div>`;
+  document.getElementById('bf-video-link').value=''; showToast('ভিডিও যোগ হয়েছে');
+}
+// Visitor
+(function(){ const el=document.getElementById('bf-visitor-count'); let v=parseInt(localStorage.getItem('bf_visits')||'3247'); try{ if(!sessionStorage.getItem('bf_counted')){ v+=1; sessionStorage.setItem('bf_counted','1'); localStorage.setItem('bf_visits',v);} }catch(e){} el.textContent=v.toLocaleString('bn-BD'); })();
+// Admin
+function openAdminLogin(){ closeModal('adminModal'); openModal('adminLoginModal'); }
+function verifyAdmin(){
+  const p=document.getElementById('adminPass').value;
+  if(p===ADMIN_PASSWORD){ closeModal('adminLoginModal'); document.getElementById('adminPass').value=''; renderAdmin(); openModal('adminModal'); }
+  else alert('ভুল পাসওয়ার্ড! সঠিক পাসওয়ার্ড দিন।');
+}
+function getOrders(){ try{return JSON.parse(localStorage.getItem('bf_store_orders')||'[]')}catch(e){return[]} }
+function renderAdmin(){
+  const q=(document.getElementById('adminSearch').value||'').toLowerCase();
+  const orders=getOrders().filter(o=>(o.name+o.phone+o.title+o.id).toLowerCase().includes(q));
+  document.getElementById('statTotal').textContent=getOrders().length;
+  const today=new Date().toLocaleDateString('bn-BD');
+  document.getElementById('statToday').textContent=getOrders().filter(o=>(o.time||'').includes(today.slice(0,5))|| (o.time||'').includes(new Date().getFullYear())).length;
+  const el=document.getElementById('adminOrders');
+  if(!orders.length){ el.innerHTML='<p style="text-align:center;color:#999;padding:20px">এখনো কোনো অর্ডার নেই।<br><span style="font-size:11px">নতুন অর্ডার এলে এখানে + Google Sheet এ আসবে।</span></p>'; return; }
+  el.innerHTML=orders.map(o=>`<div class="order-card"><b>${o.title}</b><div style="font-size:12px;margin-top:6px;line-height:1.6"><b>ID:</b> ${o.id}<br><b>সাইজ:</b> ${o.size} | <b>Qty:</b> ${o.qty}<br><b>নাম:</b> ${o.name}<br><b>ফোন:</b> <a href="tel:${o.phone}">${o.phone}</a><br><b>ঠিকানা:</b> ${o.address}<br><b>মোট:</b> <span style="color:#dc2626;font-weight:900">৳ ${o.total}</span> | <b>পেমেন্ট:</b> ${o.payment}<br><b>সময়:</b> ${o.time}</div><div style="display:flex;gap:8px;margin-top:8px"><a href="tel:${o.phone}" style="flex:1;text-align:center;background:#16a34a;color:#fff;padding:9px;border-radius:8px;text-decoration:none;font-weight:800;font-size:12px">📞 কল</a><a href="https://wa.me/88${o.phone.replace(/[^0-9]/g,'').slice(-10)}?text=${encodeURIComponent('হ্যালো '+o.name+', আপনার Baraz Fashion অর্ডার '+o.id+' কনফার্ম হয়েছে।')}" target="_blank" style="flex:1;text-align:center;background:#fff;border:2px solid #16a34a;color:#16a34a;padding:7px;border-radius:8px;text-decoration:none;font-weight:800;font-size:12px">WhatsApp</a></div></div>`).join('');
+}
+function clearAllOrders(){ if(!confirm('সব অর্ডার মুছে ফেলবেন?')) return; localStorage.removeItem('bf_store_orders'); renderAdmin(); }
+function adminLogout(){ closeModal('adminModal'); }
+
+// Init
+renderSizePills('women','detail'); renderSizePills('women','order');
+renderProducts(); renderReviews(); updateBadge(); renderCart();
+</script>
+</body>
+</html>
